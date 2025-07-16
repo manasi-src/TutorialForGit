@@ -2,42 +2,6 @@ using System;
 
 namespace GradeCalculator
 {
-    class Student
-    {
-        // Properties
-        public string Name { get; set; }
-        public int[] Marks { get; set; }
-
-        // Constructor
-        public Student(string name, int[] marks)
-        {
-            Name = name;
-            Marks = marks;
-        }
-
-        // Method to calculate average
-        public double CalculateAverage()
-        {
-            int total = 0;
-            foreach (int mark in Marks)
-            {
-                total += mark;
-            }
-            return (double)total / Marks.Length;
-        }
-
-        // Method to get grade
-        public string GetGrade()
-        {
-            double average = CalculateAverage();
-
-            if (average >= 90) return "A";
-            else if (average >= 80) return "B";
-            else if (average >= 70) return "C";
-            else if (average >= 60) return "D";
-            else return "F";
-        }
-    }
 
     class Program
     {
